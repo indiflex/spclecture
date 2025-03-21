@@ -1,3 +1,5 @@
-ttt
-
+.vscode
 node_modules
+*.local
+tmp
+ttt
