@@ -47,6 +47,6 @@ console.log('🚀 userJson:', userJson);
 console.log('--------------------------');
 const value = JSON.rawJSON('"[123, 456]"');
 console.log('🚀 value:', JSON.isRawJSON(value));
-assert.strictEqual(JSON.isRawJSON(value), false);
+assert.strictEqual(JSON.isRawJSON(value), true);
 
 console.log(JSON.stringify({ value: value }));

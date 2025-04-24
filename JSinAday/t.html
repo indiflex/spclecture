@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample HTML</title>
+  <style>
+    ul#list {
+      list-style: none;
+    }
+
+    ul.blue {
+      background-color: blue;
+      color: white;
+    }
+
+    ul li:nth-child(2) {
+      text-decoration: underline;
+    }
+
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body style="margin: 5rem;">
+  <h1 class="red">Title</h1>
+  <ul id="list">
+    <li>111</li>
+    <li class="red">444</li>
+  </ul>
+  <ul class="blue">
+    <li>QQQ</li>
+    <li>PPP</li>
+  </ul>
+  <div class="blue">Div Blue</div>
+  <strong onclick="alert('AA')">AA</strong>
+  <button id="btn">Button</button>
+
+  <script src="a.js"></script>
+  <script>
+    console.log('Hello World!');
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', (event) => {
+      const title = document.getElementsByTagName('h1');
+      console.log('🚀 title:', title[0].textContent)
+      const ul = document.getElementById('list');
+      const x = document.createElement('li');
+      const xx = document.createTextNode('XX');
+      x.appendChild(xx); // <li>XX</li>
+      ul.appendChild(x);
+      console.log('🚀 ul:', ul.children);
+      for (const li of ul.children) {
+        console.log('🚀 li:', li)
+
+      }
+    });
+
+  </script>
+</body>
+
+</html>
